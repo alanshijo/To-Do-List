@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 06, 2023 at 09:09 AM
+-- Generation Time: Sep 06, 2023 at 12:14 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `tbl_tasks` (
   `task_id` int NOT NULL,
   `task_name` varchar(255) NOT NULL,
+  `task_desc` varchar(255) NOT NULL,
   `del_status` tinyint(1) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -39,10 +40,9 @@ CREATE TABLE `tbl_tasks` (
 -- Dumping data for table `tbl_tasks`
 --
 
-INSERT INTO `tbl_tasks` (`task_id`, `task_name`, `del_status`, `created_at`, `updated_at`) VALUES
-(15, 'qwerty', 1, '2023-09-06 09:01:42', '2023-09-06 09:01:42'),
-(16, 'qwerty', 1, '2023-09-06 09:02:51', '2023-09-06 09:02:51'),
-(17, 'qwerty', 0, '2023-09-06 09:05:47', '2023-09-06 09:06:06');
+INSERT INTO `tbl_tasks` (`task_id`, `task_name`, `task_desc`, `del_status`, `created_at`, `updated_at`) VALUES
+(1, 'Task 1', 'Add button', 0, '2023-09-06 12:14:09', '2023-09-06 12:14:09'),
+(2, 'Task 2', 'Add css', 0, '2023-09-06 12:14:18', '2023-09-06 12:14:18');
 
 --
 -- Indexes for dumped tables
@@ -62,7 +62,7 @@ ALTER TABLE `tbl_tasks`
 -- AUTO_INCREMENT for table `tbl_tasks`
 --
 ALTER TABLE `tbl_tasks`
-  MODIFY `task_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `task_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
